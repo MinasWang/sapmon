@@ -12,7 +12,7 @@ import (
 
 
 
-func GetKey(url string ) (int, error) {
+func GetKey(url string ) (int64, error) {
 	
     rand.Seed(time.Now().Unix())
     tmp_file := ".li_" + strconv.Itoa(rand.Intn(1000000))
