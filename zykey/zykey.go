@@ -35,7 +35,7 @@ func GetKey(url string ) (int, error) {
     }
     contents, err := ioutil.ReadFile(tmp_file); 
     if err == nil{
-        val, _  :=  strconv.Atoi(string(contents))
+        val, _  :=  strconv.ParseInt(string(contents),10,64)
         return val, nil
     } else {
     	return 0, err
